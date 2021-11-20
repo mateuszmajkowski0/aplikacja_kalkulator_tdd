@@ -19,7 +19,7 @@ pipeline {
         stage('PYTEST') {
             steps {
                 script {
-                sh 'python3 -m pytest test_*.py'
+                sh 'python3.8 -m pytest test_*.py --html=report.html'
                 }
             }
         } //END OF STAGE PYLINT
