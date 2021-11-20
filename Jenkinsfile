@@ -1,9 +1,7 @@
 pipeline {
     agent any
     parameters {
-    	gitParameter name: 'BRANCH',
-    	defaultValue: '',
-    	type: 'PT_BRANCH'
+    gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'BRANCH', type: 'PT_BRANCH'
     }
     stages{
         stage('CHECKOUT') {
