@@ -13,6 +13,7 @@ pipeline {
             steps {
                 script {
                 sh 'python3 -m pylint test_*.py'
+                    echo 'wybierz metode'
                 }
             }
         } //END OF STAGE PYLINT
