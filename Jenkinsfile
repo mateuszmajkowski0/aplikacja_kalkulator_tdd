@@ -27,6 +27,7 @@ pipeline {
         stage('CLEANUP') {
             steps {
                 script {
+                    error 'nie dziala'
                     archiveArtifacts artifacts: 'report.html, assets/', followSymlinks: false
                     deleteDir()
                     
